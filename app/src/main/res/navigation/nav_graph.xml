@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wellcome_dest">
+
+    <fragment
+        android:id="@+id/wellcome_dest"
+        android:name="com.alg.hozon_01.WellcomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_wellcome">
+        <action
+            android:id="@+id/action_wellcomeFragment_to_graficosFragment"
+            app:destination="@id/graficos_dest" />
+        <action
+            android:id="@+id/action_wellcomeFragment_to_cuentasFragment"
+            app:destination="@id/cuentas_dest" />
+        <action
+            android:id="@+id/action_wellcomeFragment_to_categoriasFragment"
+            app:destination="@id/categorias_dest" />
+        <action
+            android:id="@+id/action_wellcomeFragment_to_preferenciasFragment"
+            app:destination="@id/Preferencias" />
+    </fragment>
+    <fragment
+        android:id="@+id/graficos_dest"
+        android:name="com.alg.hozon_01.GraficosFragment"
+        android:label="Graficos"
+        tools:layout="@layout/fragment_graficos" />
+    <fragment
+        android:id="@+id/cuentas_dest"
+        android:name="com.alg.hozon_01.CuentasFragment"
+        android:label="Cuentas"
+        tools:layout="@layout/fragment_cuentas" />
+    <fragment
+        android:id="@+id/categorias_dest"
+        android:name="com.alg.hozon_01.CategoriasFragment"
+        android:label="Categorias"
+        tools:layout="@layout/fragment_categorias" />
+    <fragment
+        android:id="@+id/Preferencias"
+        android:name="com.alg.hozon_01.PreferenciasFragment"
+        android:label="fragment_preferencias"
+        tools:layout="@layout/fragment_preferencias" />
+</navigation>

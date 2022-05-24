@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miGestor"
+        android:title="Gestor"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/graficos_dest"
+                android:icon="@mipmap/ic_grafico"
+                android:title="Graficos" />
+            <item
+                android:id="@+id/cuentas_dest"
+                android:icon="@mipmap/ic_cuentas"
+                android:title="Cuentas" />
+            <item
+                android:id="@+id/categorias_dest"
+                android:icon="@mipmap/ic_categorias"
+                android:title="Categorias" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/miOpciones"
+        android:title="Opciones"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/preferencias_dest"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="Preferencias" />
+            <item
+                android:id="@+id/mail_dest"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Mail" />
+        </menu>
+    </item>
+</menu>
