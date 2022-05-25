@@ -4,6 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btnAnadir">Añadir</string>
     <string name="etNuevaCategoria">Nueva Categoria</string>
+    <string name="etNuevaCuenta">Nueva Cuenta</string>
+    <string name="etSaldo">Saldo: </string>
 
 
     <string-array name="categorias_array">

@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void setupCategoriasViewModel() {
         categoriasViewModel = new ViewModelProvider(this).get(CategoriasViewModel.class);
     }
