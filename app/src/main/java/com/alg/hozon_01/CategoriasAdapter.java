@@ -3,7 +3,9 @@ package com.alg.hozon_01;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.alg.hozon_01.ECategorias;
 import com.alg.hozon_01.CategoriasViewModel;
+import com.alg.hozon_01.data.CategoriasRepository;
+
+import java.util.ArrayList;
 
 public class CategoriasAdapter extends ListAdapter<ECategorias, CategoriasAdapter.CategoriasViewHolder> {
     // Referencia a la default Factory de la App, a usar cuando el ViewModel no recibe parámetros y usando su constructor por defecto
@@ -64,6 +69,7 @@ public class CategoriasAdapter extends ListAdapter<ECategorias, CategoriasAdapte
             super(itemView);
             tvCategoriaItem = itemView.findViewById(R.id.tvCategoriasItem);
             ibDelete = itemView.findViewById(R.id.ibDelete);
+
             ibDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

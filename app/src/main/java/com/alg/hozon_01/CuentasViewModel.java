@@ -15,6 +15,7 @@ import java.util.concurrent.Executors;
 public class CuentasViewModel extends AndroidViewModel {
     private CuentasRepository cuentasRepository;
 
+
     private static final ExecutorService repositoryExecutor = Executors.newFixedThreadPool(1);
 
     public MutableLiveData<List<ECuentas>> ldCuentas = new MutableLiveData<>();

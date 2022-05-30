@@ -2,8 +2,6 @@ package com.alg.hozon_01.data;
 
 import android.app.Application;
 
-import androidx.lifecycle.LiveData;
-
 import com.alg.hozon_01.ECategorias;
 import com.alg.hozon_01.CategoriasDao;
 

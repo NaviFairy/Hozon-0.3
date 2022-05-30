@@ -12,14 +12,17 @@ import com.alg.hozon_01.CuentasDao;
 import com.alg.hozon_01.ECategorias;
 import com.alg.hozon_01.CategoriasDao;
 import com.alg.hozon_01.ECuentas;
+import com.alg.hozon_01.EMovimientos;
+import com.alg.hozon_01.MovimientosDao;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {ECategorias.class, ECuentas.class}, version = 1, exportSchema = false)
+@Database(entities = {ECategorias.class, ECuentas.class, EMovimientos.class}, version = 1, exportSchema = false)
 abstract public class AppRoomDatabase extends RoomDatabase {
     public abstract CategoriasDao categoriasDao();
     public abstract CuentasDao cuentasDao();
+    public abstract MovimientosDao movimientosDao();
 
     private static volatile AppRoomDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 1;
@@ -46,7 +49,8 @@ abstract public class AppRoomDatabase extends RoomDatabase {
             super.onCreate(db);
 
             databaseWriteExecutor.execute(new PopulateCategorias(INSTANCE));
-           // databaseWriteExecutor.execute(new PopulateGuisos(INSTANCE));
+            databaseWriteExecutor.execute(new PopulateCuentas(INSTANCE));
+            databaseWriteExecutor.execute(new PopulateMovimientos(INSTANCE));
 
         }
 

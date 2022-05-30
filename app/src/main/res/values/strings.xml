@@ -6,7 +6,7 @@
     <string name="etNuevaCategoria">Nueva Categoria</string>
     <string name="etNuevaCuenta">Nueva Cuenta</string>
     <string name="etSaldo">Saldo: </string>
-
+    <string name="etConceptoMovimiento">Concepto </string>
 
     <string-array name="categorias_array">
         <item>Transporte</item>
